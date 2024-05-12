@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop Art Drawing Site</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pop Art Drawing Site</h1>
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
+    <div class="controls">
+      <button id="clearBtn">Clear Canvas</button>
+      <input type="color" id="colorPicker" value="#ff0000">
+      <label for="brushSize">Brush Size:</label>
+      <input type="range" id="brushSize" min="1" max="50" value="5">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

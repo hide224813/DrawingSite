@@ -33,5 +33,26 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('clearBtn').addEventListener('click', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
   });
+
+  // Function to save canvas as PNG
+  function saveAsPNG() {
+    const url = canvas.toDataURL('image/png');
+    const link = document.createElement('a');
+    link.download = 'drawing.png';
+    link.href = url;
+    link.click();
+  }
+
+  // Function to save canvas as JPEG
+  function saveAsJPEG() {
+    const url = canvas.toDataURL('image/jpeg', 0.8); // Quality set to 0.8
+    const link = document.createElement('a');
+    link.download = 'drawing.jpg';
+    link.href = url;
+    link.click();
+  }
+
+  document.getElementById('savePNGBtn').addEventListener('click', saveAsPNG);
+  document.getElementById('saveJPGBtn').addEventListener('click', saveAsJPEG);
 });
 
